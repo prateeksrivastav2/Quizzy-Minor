@@ -1,0 +1,234 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f44dd27b35.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>
+        <%= title %>
+    </title>
+    <style>
+        #heading {
+            text-align: center;
+        }
+
+        span {
+            display: inline-block;
+            margin-bottom: 2px;
+            padding: 0;
+        }
+
+        p {
+            display: inline-block;
+        }
+
+        ul {
+            list-style: none;
+            display: inline-block; 
+            text-align: left;
+        }
+
+        li {
+            width: 1100px;
+            margin-bottom: 2px;
+        }
+
+        #ul1 {
+            text-align: center;
+        }
+
+        #list-item {
+            background-color: rgb(118, 143, 149);
+            border: 2px solid black;
+            height: 50px;
+        }
+
+        #list-item:hover {
+            background-color: lightskyblue;
+        }
+
+        #heading {
+            color: grey;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        #form1 {
+            text-align: center;
+        }
+
+        #list-item div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #delete-btn {
+            color: white;
+            margin-top: 12px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        #delete-btn1 {
+            background-color: white;
+            width: 100px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        #view-btn {
+            /* background-color: white;
+            border-radius: 30%; */
+            color: white;
+            margin-top: 7px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        #view-btn1 {
+            background-color: white;
+            width: 100px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        #div1 {
+            width: 100px;
+            margin-top: 7px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        #div2 {
+            width: 300px;
+            margin-top: 7px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        #div22 {
+            max-width: 100px;
+            margin-left: 50px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        #span2 {
+            margin-right: 345px;
+        }
+
+        #span1 {
+            margin-right: 193px;
+        }
+
+        #span3 {
+            margin-right: 90px;
+        }
+
+        #span4 {
+            margin-right: 51px;
+        }
+
+        #div3 {
+            margin-top: 5px;
+        }
+
+        .container:hover {
+            transform: scale(1.1)
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-black fixed-top">
+        <!-- Container wrapper  -->
+        <div class="container-fluid">
+            <!-- Toggle button  -->
+
+
+            <!-- Brand  -->
+            <a class="navbar-brand" href="/teacher/">
+                <img src="http://www.jiit.ac.in/jiit/ETTIC/assets/img/jiit_logo.png" height="35" width="35"
+                    alt="JIIT Logo" loading="lazy" />
+            </a>
+        </div>
+        <!-- <a href="/" class="list-group-item list-group-item-action py-2 ripple"><i
+                class="fas fa-globe fa-fw me-3"></i><span>About</span></a> -->
+        <a href="/teacher/completed" class="list-group-item list-group-item-action py-2 ripple"
+            style="color: aliceblue;"><i class="fas fa-globe fa-fw me-3"></i><span>Completed Quizes</span></a>
+
+        <a href="/teacher/pastquiz" class="list-group-item list-group-item-action py-2 ripple"
+            style="color: aliceblue;"><i class="fas fa-globe fa-fw me-3"></i><span>Available Quizes</span></a>
+        <a href="/teacher/quizmaker" class="list-group-item list-group-item-action py-2 ripple"
+            style="color: aliceblue;"><i class="fas fa-building fa-fw me-3"></i><span>Make New Quiz </span></a>
+        <a href="/teacher/changepassword" class="list-group-item list-group-item-action py-2 ripple"
+            style="color: aliceblue;"><i class="fas fa-lock fa-fw me-3"></i><span> Change Password</span></a>
+        <a href="/teacher/logout" class="list-group-item list-group-item-action py-2 ripple"
+            style="color: aliceblue;"><i class="fas fa-lock fa-fw me-3"></i><span>Logout</span></a>
+        <!-- Container wrapper -->
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h1 id="heading"><i class="fa-solid fa-pencil"></i> Questions!</h1>
+    </div>
+    <div id="ul1" style="min-height: fit-content;">
+        <ul id="list">
+            <% for(let i of past_quiz){ %>
+                <!-- <div class="card text-bg-secondary mb-3" style="border-color: black"></div> -->
+                <!-- <li id="list-item"> -->
+                <div class="container" style="width: 100%;">
+                    <div class="row" style="width: 100%;">
+                        <div class="my-2" style="width: 100%;">
+                            <div class="card text-bg-secondary mb-3"
+                                style="border-color: black; border-width: 2px; width: 100%;">
+                                <h7 class="card-body" style="width: 4000px;">
+                                    <div id="div2" style="width: 4000px;">
+                                        <%= i.questionText %>
+                                    </div>
+                                </h7>
+                                <div style="display: flex;flex-direction: row-reverse;">
+                                    <a class="btn btn-primary" style="width: 10%;margin-bottom: 1%;margin-right: 1%;"
+                                        href="/teacher/deleteques/?id=<%=i._id%>">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </li> -->
+                <!-- <div style="min-height: fit-content;">
+                        <div id="div1" >
+                            
+                        </div>
+                        <div style="height: 10px;"></div>
+                        <div id="div2" style="min-height: fit-content; min-height: auto;">
+                          
+                        </div>
+                         <a href="/teacher/viewquiz/?id=" id="view-btn"><i class="fa-regular fa-eye"></i> </a> -->
+                <!-- </div>  -->
+                <!-- </div> -->
+                <% } %>
+        </ul>
+    </div>
+    <!-- <div id="form1">
+        <form action='/add-cont' method="POST">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="number" name="number" placeholder="Enter number" required>
+            <button type="submit">Add Contact</button>
+        </form>
+    </div> -->
+</body>
+
+</html>

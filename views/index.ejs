@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quizzy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="favicon" href="C:\Users\admin\Desktop\MINOR\views\Favicons\favicon (1).ico" type="image/x-icon"> -->
+    <link rel="icon" href="/views/Favicons/favicon (1).ico" type="image/x-icon">
+    <!-- <link rel="icon" sizes="32x32" href="views\Favicons\favicon.ico">  -->
+    <!-- <link rel="shortcut icon" href="/views/Favicons/favicon.ico" type="image/x-icon"> -->
+    <style>
+        body {
+            font-family: "Lato", sans-serif
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        .cn {
+            transition-property: color, background-color;
+            transition-duration: 0s;
+            transition-delay: 0s;
+        }
+
+        .cn:hover {
+            scale: 1.1;
+            color: blue;
+        }
+
+        .title-word {
+            animation: color-animation 4s linear infinite;
+        }
+
+        .title-word-1 {
+            --color-1: #DF8453;
+            --color-2: #3D8DAE;
+            --color-3: #E4A9A8;
+        }
+
+        .title-word-2 {
+            --color-1: #DBAD4A;
+            --color-2: #ACCFCB;
+            --color-3: #17494D;
+        }
+
+        .title-word-3 {
+            --color-1: #ACCFCB;
+            --color-2: #E4A9A8;
+            --color-3: #ACCFCB;
+        }
+
+        .title-word-4 {
+            --color-1: #3D8DAE;
+            --color-2: #DF8453;
+            --color-3: #E4A9A8;
+        }
+
+        @keyframes color-animation {
+            0% {
+                color: var(--color-1)
+            }
+
+            32% {
+                color: var(--color-1)
+            }
+
+            33% {
+                color: var(--color-2)
+            }
+
+            65% {
+                color: var(--color-2)
+            }
+
+            66% {
+                color: var(--color-3)
+            }
+
+            99% {
+                color: var(--color-3)
+            }
+
+            100% {
+                color: var(--color-1)
+            }
+        }
+
+        /* Here are just some visual styles. 🖌 */
+
+        .container {
+            display: grid;
+            place-items: center;
+            text-align: center;
+            height: 100vh
+        }
+
+        .title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-size: 1.5vw;
+            text-transform: uppercase;
+        }
+        .fooooter{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="footer">
+        copyright © pns
+        =======
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card">
+                <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                    href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                        class="fa fa-bars"></i></a>
+                <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+                <a href="/teacher" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Teacher</a>
+                <a href="/student" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Student</a>
+               
+            </div>
+        </div>
+        <!-- Page content -->
+        <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+
+
+
+
+
+            <div style="display: flex;justify-content: center;width: 100%;">
+                <div class="container" style="width: 60%;height: 40%;">
+                    <h2 class="title">
+                        <span class="title-word title-word-1">Jaypee</span>
+                        <span class="title-word title-word-2">Institute</span>
+                        <span class="title-word title-word-3">of Information</span>
+                        <span class="title-word title-word-4">Technology</span>
+                    </h2>
+                </div>
+                <!-- <img src="https://tse1.mm.bing.net/th?id=OIP.2xYsanuB-s8wH8Od6l5kUAHaHa&pid=Api&P=0&h=180" alt="" style="display: inline-block;width: 20%;" height="100px" width="50px"> -->
+            </div>
+            <div class="w3-third" style="display: flex;justify-content: center;width: 100%;">
+
+                <img src="http://www.jiit.ac.in/jiit/ETTIC/assets/img/jiit_logo.png" alt="hey"
+                    style="width: 150px;height: 150px;">
+            </div>
+
+            <!-- The Band Section -->
+            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:600px;text-align: center;"
+                id="band">
+
+                <!-- <p class="w3-opacity"><i>We love music</i></p> -->
+                <div class="first"></div>
+                <div style="display: flex;justify-content: center;">
+                    <p class="w3-justify" style="font-size: 40px;">Welcome to the quiz portal!</p>
+                </div>
+            </div>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="display: flex;">
+                <div class="carousel-inner">
+                    <!-- sliding photos -->
+                    <!-- <div class="carousel-item active">
+                        <img src="https://www.jiit.ac.in/sites/default/files/home-banner-1.jpg" class="d-block w-100"
+                            alt="..." height="500px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://storage.googleapis.com/ezap-prod/colleges/254/jaypee-institute-of-information-technology-university-campus.jpg"
+                            class="d-block w-100" alt="..." height="500px">
+                    </div>
+                    <div class="carousel-item" style="height: 500px;">
+                        <img src="https://t3.ftcdn.net/jpg/03/45/97/36/360_F_345973621_sMifpCogXNoIDjmXlbLwx1QZA5ZmQVl8.jpg"
+                            class="d-block w-100" alt="..." height="500px">
+                    </div> -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+            </div>
+            <div class="w3-row w3-padding-32" style="display: flex;justify-content: center;height: 500px;">
+                    <img alt="header"
+                        srcset="https://static.uacdn.net/production/_next/static/images/home-illustration.svg?q=75&amp;auto=format%2Ccompress&amp;w=640 1x, https://static.uacdn.net/production/_next/static/images/home-illustration.svg?q=75&amp;auto=format%2Ccompress&amp;w=1200 2x"
+                        src="https://static.uacdn.net/production/_next/static/images/home-illustration.svg?q=75&amp;auto=format%2Ccompress&amp;w=1200"
+                        width="560" height="333" decoding="async" data-nimg="1"
+                        class="css-fz77qc-StyledNextImage e1n3w55p0" loading="eager" style="color:transparent">
+            
+        </div>
+
+
+
+        <footer class="fooooter" style="border-top: 2px black solid;
+        display: flex; flex-direction: column;height: 200px;">
+
+            <div style="display: flex;justify-content: center;">
+                <a href="mailto:rawatsuyash78@gmail.com" style="text-decoration: none; margin-right: 30px; color: grey;"
+                    target="_blank">
+                    <p class="cn" style="font-size: 20px;">Contact Us</p>
+                </a>
+                <a href="https://jiit.ac.in" style="text-decoration: none;color: grey;" target="_blank">
+                    <p class="cn" style="font-size: 20px;">JIIT</p>
+                </a>
+            </div>
+            <br>
+            <div style="display: inline;width: 100%;">
+                <div class="sc-iAEawV ehkpEy"
+                style="margin: 20px;">
+                <a href="https://jiit.ac.in">
+                <svg class="remixicon-icon " width="30" height="24" fill="white" viewBox="0 0 24 24"><path d="M10.076 11c.6 0 1.086.45 1.075 1 0 .55-.474 1-1.075 1C9.486 13 9 12.55 9 12s.475-1 1.076-1zm3.848 0c.601 0 1.076.45 1.076 1s-.475 1-1.076 1c-.59 0-1.075-.45-1.075-1s.474-1 1.075-1zm4.967-9C20.054 2 21 2.966 21 4.163V23l-2.211-1.995-1.245-1.176-1.317-1.25.546 1.943H5.109C3.946 20.522 3 19.556 3 18.359V4.163C3 2.966 3.946 2 5.109 2H18.89zm-3.97 13.713c2.273-.073 3.148-1.596 3.148-1.596 0-3.381-1.482-6.122-1.482-6.122-1.48-1.133-2.89-1.102-2.89-1.102l-.144.168c1.749.546 2.561 1.334 2.561 1.334a8.263 8.263 0 0 0-3.096-1.008 8.527 8.527 0 0 0-2.077.02c-.062 0-.114.011-.175.021-.36.032-1.235.168-2.335.662-.38.178-.607.305-.607.305s.854-.83 2.705-1.376l-.103-.126s-1.409-.031-2.89 1.103c0 0-1.481 2.74-1.481 6.121 0 0 .864 1.522 3.137 1.596 0 0 .38-.472.69-.871-1.307-.4-1.8-1.24-1.8-1.24s.102.074.287.179c.01.01.02.021.041.031.031.022.062.032.093.053.257.147.514.262.75.357.422.168.926.336 1.513.452a7.06 7.06 0 0 0 2.664.01 6.666 6.666 0 0 0 1.491-.451c.36-.137.761-.337 1.183-.62 0 0-.514.861-1.862 1.25.309.399.68.85.68.85z"></path></svg></a>
+            <a href="https://jiit.ac.in">
+                <svg class="remixicon-icon " width="30" height="24" fill="white" viewBox="0 0 24 24"><path d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 0 1-1.548-1.549 1.548 1.548 0 1 1 1.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z"></path></svg></a>                
+            <a href="https://jiit.ac.in">
+                <svg class="remixicon-icon " width="30" height="24" fill="white" viewBox="0 0 24 24"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"></path></svg></a>                
+                <a href="https://jiit.ac.in">
+                <svg class="remixicon-icon " width="30" height="24" fill="white" viewBox="0 0 24 24"><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"></path></svg></a>            
+            <a href="https://jiit.ac.in">
+            <svg class="remixicon-icon " width="30" height="24" fill="white" viewBox="0 0 24 24"><path d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z"></path></svg>
+            </a>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

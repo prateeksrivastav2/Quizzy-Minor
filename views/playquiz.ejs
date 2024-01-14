@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f44dd27b35.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Quiz Timer</title>
+    <script src="https://kit.fontawesome.com/f44dd27b35.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        #heading {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading"><i class="fa-solid fa-pencil"></i> Available Quiz!</h1>
+    <div id="timer" style="text-align:center;">Time Remaining: <%= timer %></div>
+    <h3 style="text-align: center;"> <%= quizname %></h3>
+    <form action = "/student/saveanswer" method="post">
+        <% for(let i of past_quiz){ %>
+            <div class="container">
+                <div class="row" style="width: 100%;">
+                    <div class="my-2" style="width: 100%;">
+                        <div class="card text-bg-secondary mb-3" style="border-color: black; border-width: 2px;">
+                            <h7 class="card-body">
+                                Qn
+                                <%= i.questionId%> :
+                                    <%= i.questionText %>
+                            </h7>
+                            <div class="card-body">
+                                <input type="hidden" name="questionId" value="<%= i._id %>">
+                                <textarea name="answer" id="" cols="120" rows="2" placeholder="Answer"></textarea>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>      
+                <div class="container" style="display: flex ; text-align: center;">
+                    
+                    <button id="submitBtn" style="text-align: center;">Submit Quiz</button>
+                </div> 
+    </form>
+    <script>
+        // Set the timer duration in seconds
+        const quizDuration = `<%= timer*60 %>`; // 15 minutes
+        let remainingTime = quizDuration;
+        let isTimeUp = false;
+
+        const timerElement = document.getElementById("timer");
+        const submitButton = document.getElementById("submitBtn");
+
+        // Function to update the timer display
+        function updateTimerDisplay() {
+            const minutes = Math.floor(remainingTime / 60);
+            const seconds = remainingTime % 60;
+            timerElement.textContent = `Time Remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
+        // Function to handle the timer
+        function startTimer() {
+            const timerInterval = setInterval(function () {
+                if (remainingTime > 0) {
+                    remainingTime--;
+                    updateTimerDisplay();
+                    // document.querySelector('#submitBtn').click();
+                } else {
+                    isTimeUp = true;
+                    updateTimerDisplay();
+                    clearInterval(timerInterval);
+                    document.querySelector('#submitBtn').click();
+                    alert("Quiz submitted successfully");
+                    // Automatically submit the quiz
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Submit Quiz";
+                }
+            }, 1000); // 1 second interval
+        }
+
+        // Start the timer when the page loads
+        startTimer();
+
+        // Event listener for the submit button
+        // submitButton.addEventListener("click", function () {
+            
+        //         alert("Quiz submitted successfully");
+            
+        // });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

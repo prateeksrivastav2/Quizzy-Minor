@@ -1,0 +1,37 @@
+{
+  "name": "minor",
+  "version": "1.0.0",
+  "description": "minor project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon views/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikunjgarg23/minor_sem5.git"
+  },
+  "author": "PNS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikunjgarg23/minor_sem5/issues"
+  },
+  "homepage": "https://github.com/Nikunjgarg23/minor_sem5#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.4.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "openai": "^4.0.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "react": "^18.2.0"
+  }
+}

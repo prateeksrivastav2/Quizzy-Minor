@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/f44dd27b35.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f44dd27b35.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .registration-form {
+            padding: 38px 0;
+            /* margin-top: 400px; */
+        }
+
+        .registration-form form {
+            background-color: #7D7C7C;
+            max-width: 460px;
+            margin: auto;
+            padding-top: 30px;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-bottom: 15px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-radius: 40px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+            margin-top: 30px;
+        }
+
+        .registration-form .form-icon {
+            text-align: center;
+            background-color: #7D7C7C;
+            border-radius: 50%;
+            font-size: 40px;
+            color: #000;
+            width: 100px;
+            height: 70px;
+            margin: auto;
+            margin-bottom: 50px;
+            line-height: 100px;
+        }
+
+        .registration-form .item {
+            border-radius: 20px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+        }
+
+        .registration-form .create-account {
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #000;
+            border: none;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 576px) {
+            .registration-form form {
+                padding: 50px 20px;
+            }
+
+            .registration-form .form-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 30px;
+                line-height: 70px;
+            }
+        }
+
+        .br {
+            border: black solid;
+            border-radius: 20px;
+        }
+
+        .create-account:hover {
+            color: #CCC8AA;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-black fixed-top">
+        <!-- Container wrapper  -->
+        <div class="container-fluid">
+            <!-- Toggle button  -->
+
+
+            <!-- Brand  -->
+            <a class="navbar-brand" href="/teacher/">
+                <img src="http://www.jiit.ac.in/jiit/ETTIC/assets/img/jiit_logo.png" height="35" width="35"
+                    alt="JIIT Logo" loading="lazy" />
+            </a>
+        </div>
+        <!-- <a href="/" class="list-group-item list-group-item-action py-2 ripple"><i
+                class="fas fa-globe fa-fw me-3"></i><span>About</span></a> -->
+                <a href="/teacher/completed" class="list-group-item list-group-item-action py-2 ripple"
+                style="color: aliceblue;"><i class="fas fa-globe fa-fw me-3"></i><span>Completed Quizes</span></a>
+    
+            <a href="/teacher/pastquiz" class="list-group-item list-group-item-action py-2 ripple"
+                style="color: aliceblue;"><i class="fas fa-globe fa-fw me-3"></i><span>Available Quizes</span></a>
+            <a href="/teacher/quizmaker" class="list-group-item list-group-item-action py-2 ripple"
+                style="color: aliceblue;"><i class="fas fa-building fa-fw me-3"></i><span>Make New Quiz </span></a>
+            <a href="/teacher/changepassword" class="list-group-item list-group-item-action py-2 ripple"
+                style="color: aliceblue;"><i class="fas fa-lock fa-fw me-3"></i><span> Change Password</span></a>
+            <a href="/teacher/logout" class="list-group-item list-group-item-action py-2 ripple"
+                style="color: aliceblue;"><i class="fas fa-lock fa-fw me-3"></i><span>Logout</span></a>
+        <!-- Container wrapper -->
+    </nav>
+
+    <div class="registration-form">
+
+
+        <form action="/teacher/createquiz" method="post" class="br">
+
+            <div class="form-icon">
+                <img src="http://www.jiit.ac.in/jiit/ETTIC/assets/img/jiit_logo.png" alt="" height="90" width="100">
+                <!-- <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/f7ce033a-831a-42af-8ac0-6ae8ae66cc6d/d5mwe2v-a84d7b67-1a16-44a9-b3ba-cad774f0db8a.png/v1/fill/w_799,h_1001,q_70,strp/jiit_logo_by_wooooweee_d5mwe2v-pre.jpg" alt="">  -->
+                <span><i class="icon icon-user"></i></span>
+            </div>
+            <div>
+                <h3>Enter The Quiz Details</h3>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="username" name="owner" placeholder="Teacher Name"
+                    required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="username" name="quizname" placeholder="QuizName"
+                    required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="username" name="quizdescription"
+                    placeholder="QuizDescription" required>
+            </div>
+            <div class="form-group">
+                <!-- <input type="text" class="form-control item" id="email" name="owneremail" placeholder="Email" required> -->
+                <span>&nbsp; Email : <%= email%></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-block create-account" value="Create">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
